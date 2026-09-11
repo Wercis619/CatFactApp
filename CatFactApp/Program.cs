@@ -1,7 +1,17 @@
+using CatFactApp.Services;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddRazorPages();
+builder.Services.AddHttpClient<ICatFactService, CatFactService>(client =>
+{
+    client.BaseAddress =
+        new Uri("https://catfact.ninja/");
+
+    client.Timeout =
+        TimeSpan.FromSeconds(15);
+});
 
 var app = builder.Build();
 
