@@ -22,4 +22,10 @@
             Length: @Model.CatFact.Length
         </p>
     }
+    @if (Model.ErrorMessage != null)
+    {
+        <p>
+            @Model.ErrorMessage
+        </p>
+    }
 </div>

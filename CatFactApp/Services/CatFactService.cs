@@ -16,11 +16,10 @@ namespace CatFactApp.Services
 
         public async Task<CatFact?> GetFactAsync()
         {
-            var response =
-           await _httpClient.GetAsync("fact");
-
+           
+            var response = await _httpClient.GetAsync("fact");
             response.EnsureSuccessStatusCode();
-
+            
             string json =
                 await response.Content.ReadAsStringAsync();
 
@@ -34,8 +33,6 @@ namespace CatFactApp.Services
 
                 await _fileService.SaveAsync(line);
             }
-
-
 
             return catFact;
         }
