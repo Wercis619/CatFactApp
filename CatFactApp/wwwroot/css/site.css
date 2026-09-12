@@ -20,3 +20,111 @@ html {
 body {
   margin-bottom: 60px;
 }
+
+.cat-page {
+    min-height: 75vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 20px;
+}
+
+.cat-card {
+    width: 100%;
+    max-width: 720px;
+    background: white;
+    border-radius: 24px;
+    padding: 45px;
+    box-shadow: 0 15px 45px rgba(0, 0, 0, 0.08);
+    border: 1px solid #eeeeee;
+}
+
+.cat-header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.cat-icon {
+    font-size: 48px;
+    margin-bottom: 10px;
+}
+
+.cat-header h1 {
+    font-size: 36px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.cat-header p {
+    color: #6c757d;
+    margin: 0;
+    font-size: 16px;
+}
+
+.cat-form {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.cat-button {
+    border: none;
+    border-radius: 12px;
+    padding: 12px 28px;
+    font-size: 16px;
+    font-weight: 600;
+    background: #212529;
+    color: white;
+    transition: 0.2s ease;
+}
+
+    .cat-button:hover {
+        background: #000000;
+        transform: translateY(-2px);
+    }
+
+.fact-box {
+    background: #f8f9fa;
+    border-radius: 16px;
+    padding: 25px;
+    text-align: left;
+    border-left: 5px solid #212529;
+}
+
+.fact-label {
+    display: inline-block;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    color: #6c757d;
+    margin-bottom: 12px;
+}
+
+.fact-text {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 18px;
+}
+
+.fact-footer {
+    font-size: 14px;
+    color: #6c757d;
+}
+
+.error-box {
+    margin-top: 20px;
+    padding: 16px;
+    border-radius: 12px;
+    background: #fff1f1;
+    color: #b42318;
+    border: 1px solid #f5c2c7;
+}
+
+@media (max-width: 600px) {
+    .cat-card {
+        padding: 28px 20px;
+    }
+
+    .cat-header h1 {
+        font-size: 28px;
+    }
+}

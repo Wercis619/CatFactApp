@@ -1,31 +1,47 @@
 ﻿@page
 @model IndexModel
 @{
-    ViewData["Title"] = "Home page";
+    ViewData["Title"] = "Cat Fact App";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
-    <form method="post">
-        <button type="submit">
-            Pobierz fakt
-        </button>
-    </form>
+<div class="cat-page">
+    <div class="cat-card">
 
-    @if (Model.CatFact != null)
-    {
-        <p>
-            Fact: @Model.CatFact.Fact
-        </p>
-        <p>
-            Length: @Model.CatFact.Length
-        </p>
-    }
-    @if (Model.ErrorMessage != null)
-    {
-        <p>
-            @Model.ErrorMessage
-        </p>
-    }
+        <div class="cat-header">
+            <div class="cat-icon">🐱</div>
+            <h1>Cat Fact App</h1>
+            <p>
+                Odkryj losowy fakt o kotach pobrany z zewnętrznego API.
+            </p>
+        </div>
+
+        <form method="post" class="cat-form">
+            <button type="submit" class="cat-button">
+                Pobierz nowy fakt
+            </button>
+        </form>
+
+        @if (Model.CatFact != null)
+        {
+            <div class="fact-box">
+                <span class="fact-label">CAT FACT</span>
+
+                <p class="fact-text">
+                    @Model.CatFact.Fact
+                </p>
+
+                <div class="fact-footer">
+                    Długość: <strong>@Model.CatFact.Length</strong> znaków
+                </div>
+            </div>
+        }
+
+        @if (Model.ErrorMessage != null)
+        {
+            <div class="error-box">
+                @Model.ErrorMessage
+            </div>
+        }
+
+    </div>
 </div>
